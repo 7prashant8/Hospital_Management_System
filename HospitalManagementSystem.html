@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #receipt {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+   <!-- Administration Section -->
+<form action="hmsystem.php" method="POST">
+    <h2>Administration Section</h2>
+    <table>
+        <tr>
+            <td>Patient ID:</td>
+            <td><input type="number" name="patientID" required></td>
+        </tr>
+        <tr>
+            <td>Patient Name:</td>
+            <td><input type="text" name="patientName" required></td>
+        </tr>
+        <tr>
+            <td>Patient Diseases: </td>
+            <td><input type="text" name="patientDiseases" required></td>
+        </tr>
+        <tr>
+            <td>Doctor ID: </td>
+            <td><input type="number" name="doctorID" required></td>
+        </tr>
+        <tr>
+            <td>Doctor Name: </td>
+            <td><input type="text" name="doctorName" required></td>
+        </tr>
+        <tr>
+            <td>Patient Enroll</td>
+            <td><input type="text" name="patientEnroll" required></td>
+        </tr>
+        <!-- Other fields for administration section -->
+    </table>
+
+    <!-- Doctor Section -->
+    <h2>Doctor Section</h2>
+    <table>
+        
+        <tr>
+            <td>Patient Previous: </td>
+            <td><input type="text" name="patientPrevious" required></td>
+        </tr>
+        <tr>
+            <td>Patient Growth:</td>
+            <td><input type="text" name="patientGrowth" required></td>
+        </tr>
+        <tr>
+            <td>Patient Decline:</td>
+            <td><input type="text" name="patientDecline" required></td>
+        </tr>
+        <!-- Fields for doctor section -->
+    </table>
+
+    <!-- Clinic Section -->
+    <h2>Clinic Section</h2>
+    <table>
+        <!-- Fields for clinic section -->
+        <tr>
+            <td>Tablet Number:</td>
+            <td><input type="number" id="tabletNo" name="tabletNo" required></td>
+        </tr>
+        <tr>
+            <td>Syrup Number:</td>
+            <td><input type="number" id="syrupNo" name="syrupNo" required></td>
+        </tr>
+        <tr>
+            <td>Tablet Price:</td>
+            <td><input type="number" id="tabletPrice" name="tabletPrice" required></td>
+        </tr>
+        <tr>
+            <td>Syrup Price:</td>
+            <td><input type="number" id="syrupPrice" name="syrupPrice" required></td>
+        </tr>
+        <tr>
+            <td>Normal Bed:</td>
+            <td><input type="number" id="normalBed" name="normalBed" required></td>
+        </tr>
+        <tr>
+            <td>AC Bed:</td>
+            <td><input type="number" id="acBed" name="acBed" required></td>
+        </tr>
+    </table>
+
+    <!-- Calculate Receipt Button -->
+    <button type="button" onclick="calculateReceipt()">Calculate Receipt</button>
+
+    <!-- Receipt Section -->
+    <div id="receipt"></div>
+    
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
